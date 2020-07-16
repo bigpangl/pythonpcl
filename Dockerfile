@@ -1,10 +1,7 @@
 FROM bigpangl/python:3.6-ubuntu-16.04
-
-
 RUN set -ex \
 	&& apt-get update && apt-get upgrade\
-
-    && apt-get install -y --no-install-recommends --no-install-suggests libpcl-dev\
+    && apt-get install -y --no-install-recommends --no-install-suggests libpcl-dev \
     && pip --no-cache-dir install  python-pcl \
     && apt-get remove -y make \
         bzip2 \
